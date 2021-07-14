@@ -19,7 +19,7 @@
                             <router-link class="nav-link" to="/about">What's new</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Woman</a>
+                            <router-link class="nav-link" to="/categories">Woman</router-link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Men</a>
@@ -29,9 +29,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Training</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sale</a>
                         </li>
                     </ul>
                 </div>
