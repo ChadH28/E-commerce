@@ -3,60 +3,119 @@
     <div>
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col">
               <div class="card">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <img alt="Vue picture" id='card-img' class="card-img-top" title="golfer" src="../assets/slim.jpg">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <div class="card-text">
-                    <p>
+                    <p class='item-price'>
                       R35
                     </p>
+                  </div>
+                  <div class="card-text">
+                    <div class="colors-wrap">
+                      <span class="colors"></span>
+                      <span class="colors selected"></span>
+                      <span class="colors"></span>
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <div class="size-wrap">
+                      <span class="size">XS</span>
+                      <span class="size">S</span>
+                      <span class="size selected">M</span>
+                      <span class="size">L</span>
+                      <span class="size">XL</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <img alt="Vue picture" id='card-img' class="card-img-top" title="golfer" src="../assets/t-top.jpg">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <div class="card-text">
-                    <p>
+                    <p class='item-price'>
                       R35
                     </p>
+                  </div>
+                  <div class="card-text">
+                    <div class="colors-wrap">
+                      <span class="colors"></span>
+                      <span class="colors selected"></span>
+                      <span class="colors"></span>
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <div class="size-wrap">
+                      <span class="size">XS</span>
+                      <span class="size">S</span>
+                      <span class="size selected">M</span>
+                      <span class="size">L</span>
+                      <span class="size">XL</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <img alt="Vue picture" id='card-img' class="card-img-top" title="golfer" src="../assets/tapered.jpg">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <div class="card-text">
-                    <p>
+                    <p class='item-price'>
                       R35
                     </p>
+                  </div>
+                  <div class="card-text">
+                    <div class="colors-wrap">
+                      <span class="colors"></span>
+                      <span class="colors selected"></span>
+                      <span class="colors"></span>
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <div class="size-wrap">
+                      <span class="size">XS</span>
+                      <span class="size">S</span>
+                      <span class="size selected">M</span>
+                      <span class="size">L</span>
+                      <span class="size">XL</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <img alt="Vue picture" id='card-img' class="card-img-top img-fluid" title="golfer" src="../assets/v-neck.jpg">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <div class="card-text">
-                    <p>
+                    <p class='item-price'>
                       R45
                     </p>
                   </div>
                   <div class="card-text">
-                    <p>
-                      R45
-                    </p>
+                    <div class="colors-wrap">
+                      <span class="colors"></span>
+                      <span class="colors selected"></span>
+                      <span class="colors"></span>
+                    </div>
+                  </div>
+                  <div class="card-text">
+                    <div class="size-wrap">
+                      <span class="size">XS</span>
+                      <span class="size">S</span>
+                      <span class="size selected">M</span>
+                      <span class="size">L</span>
+                      <span class="size">XL</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -205,6 +264,91 @@ export default {
 #nav-link-header{
   border-top: 1px solid #455a64;
 }
+
+#card-img{
+  height: 300px;
+  padding: 10px
+}
+
+#card-img:hover{
+  cursor: pointer;
+}
+
+
+
+.card-title{
+  font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.4em; 
+	font-weight: 400;
+	color: #484848;
+	font-weight: bold;
+}
+
+.item-price{
+  font-family: 'Josefin Sans', sans-serif; 
+	font-weight: 200;
+	color: black;
+	font-weight: bold;
+}
+
+
+.selected{
+	box-shadow: 0 0 0 4px #fff, 0 0 0 8px rgba(173, 173, 170, .3);
+}
+
+.colors-wrap, .size-wrap{
+	width: 100%;
+	margin: 5px auto;
+	padding: 10px;
+	border-radius: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.colors{
+  width:30px;
+  height:20px;
+  display:inline-block;
+  transition:0.3s all;
+  background: #ef8bef;
+  transition: all .3s;
+  margin: 0 15px;
+}
+
+.colors:hover, .size:hover{
+  transform: scale(1.0);
+  box-shadow: 0 0 0 8px rgba(173, 173, 170, .3);
+  cursor: pointer;
+}
+
+.colors:active, .size:active{
+  transform: scale(.8);
+}
+
+.colors:nth-child(2){
+  background: #f43542;
+}.colors:nth-child(3){
+  background: #ffe55b;
+}.colors:nth-child(4){
+  background: #6cf96c;
+}
+
+.size{
+  background-color: #eceff1;
+  padding: 10px;
+  width: 45px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+	cursor: pointer;
+	transition: all .3s;
+  font-family: 'Josefin Sans', sans-serif; 
+	font-weight: 200;
+}
+
+
 
 /* #nav-link-header:last-of-type {
   border-bottom: 1px solid #455a64; 
