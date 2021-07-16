@@ -302,8 +302,6 @@ export default {
 	padding: 10px;
 	border-radius: 70px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .colors{
@@ -336,12 +334,13 @@ export default {
 
 .size{
   background-color: #eceff1;
+  border: 2px solid rgb(190, 190, 190);
   padding: 10px;
   width: 45px;
   height: 30px;
   display: flex;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 15px;
 	cursor: pointer;
 	transition: all .3s;
   font-family: 'Josefin Sans', sans-serif; 
