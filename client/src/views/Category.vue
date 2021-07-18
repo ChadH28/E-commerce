@@ -1,17 +1,19 @@
 <template>
     <!-- sidebar -->
     <div>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <div class="col">
+          <div class='control-bar'>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">FILTER</button>
+          </div>
+          <div v-if="showProducts" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col" v-for="item in items" :key="item.id" >
               <div class="card">
-                <img alt="Vue picture" id='card-img' class="card-img-top" title="golfer" src="../assets/slim.jpg">
+                <img alt="Vue picture" id='card-img' class="card-img-top" :title="item.name" src="../assets/slim.jpg">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">{{item.name}}</h5>
                   <div class="card-text">
                     <p class='item-price'>
-                      R35
+                      R {{item.price}}
                     </p>
                   </div>
                   <div class="card-text">
@@ -33,7 +35,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
               <div class="card">
                 <img alt="Vue picture" id='card-img' class="card-img-top" title="golfer" src="../assets/t-top.jpg">
                 <div class="card-body">
@@ -119,7 +121,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="offcanvas offcanvas-start sidebar" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -129,7 +131,86 @@
             </div>
             <div class="offcanvas-body">
                 <h4 class="sidebar-subtitle">Shopping Options</h4>
-                <ul class="nav flex-column">
+                <hr>
+                <div class="accordion accordion-flush" id="accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        CATEGORY
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                          <a class="dropdown-item" href="#">Mens Tops</a>
+                          <a class="dropdown-item" href="#">Womans Tops</a>
+                          <a class="dropdown-item" href="#">Hoodies</a>
+                          <a class="dropdown-item" href="#">Pants</a>
+                          <a class="dropdown-item" href="#">Gear</a>
+                          <a class="dropdown-item" href="#">Training</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        SIZE
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        <a class='nav-item' href="#">XS</a> |
+                        <a class='nav-item' href="#">S</a> |
+                        <a class='nav-item' href="#">M</a> |
+                        <a class='nav-item' href="#">L</a> |
+                        <a class='nav-item' href="#">XL</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        STYLE
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        CLIMATE
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        <a class="dropdown-item" href="#">For the Hot Summer Days</a>
+                        <a class="dropdown-item" href="#">For the Cold Winter Days</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        MATERIAL
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        PRICE
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <ul class="nav flex-column">
                   <li id='nav-link-header' class="nav-item dropdown">
                       <a  class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#category" role="button" aria-expanded="false" aria-controls="category">
                         CATEGORY
@@ -210,17 +291,33 @@
                   <li id='nav-link-header' class="nav-item">
                       <h4 class="sidebar-subtitle">Wish List</h4>
                   </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import {products} from '../data.js'
 export default {
     name: "Category",
     components: {},
+      data () {
+        return {
+          showProducts: true,
+          items: products
+        }
+  },
+  methods: {
+    toggleProducts() {
+      this.showProducts = !this.showProducts
+    }
+   },
 };
+
+
+
+
 </script>
 
 <style>
@@ -302,6 +399,7 @@ export default {
 	padding: 10px;
 	border-radius: 70px;
 	display: flex;
+  
 }
 
 .colors{
@@ -347,7 +445,9 @@ export default {
 	font-weight: 200;
 }
 
-
+.control-bar{
+  padding:10px;
+}
 
 /* #nav-link-header:last-of-type {
   border-bottom: 1px solid #455a64; 

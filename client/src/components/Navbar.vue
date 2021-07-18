@@ -3,14 +3,9 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <router-link class="navbar-brand" to="/"> Luma</router-link>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                        <div>
-                            <p><i class="fas fa-thumbs-up"></i> 0</p>
-                        </div>
-                    </form>
-                    
+                    <div class="nav-item">
+                        <router-link class="nav-link" to="/checkout"><i class="fa fa-shopping-bag"></i> 0</router-link>
+                    </div>
             </div>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,16 +42,6 @@
 
 <style>
 
-.fa-thumbs-up{
-    color: black
-}
+
 
 </style>
-
-
-
-    <router-link class="nav-link active" to="/">Home</router-link>
-    |
-    <router-link class="nav-link" to="/about">About</router-link>
-    |
-    <router-link class="nav-link" to="/login">Login</router-link>

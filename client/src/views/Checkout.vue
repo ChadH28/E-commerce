@@ -5,23 +5,23 @@
     <div class="row">
       <div class="col-md-8 shipping-form-section">
         <form class="form-inline" action="/action_page.php">
-          <label for="email">Email Address <span>*</span></label>
+          <label for="email">Email Address <span class="required">*</span></label>
             <input type="email" class="form-control" placeholder="Enter email" id="email">
             <p>You can create am account after checkout.</p>
             <hr>
-          <label for="name">First Name <span>*</span></label>
+          <label for="name">First Name <span class="required">*</span></label>
             <input type="text" class="form-control" id="name">
-          <label for="Lname">Last Name <span>*</span></label>
+          <label for="Lname">Last Name <span class="required">*</span></label>
             <input type="text" class="form-control" id="Lname">
-          <label for="company">Company <span>*</span></label>
+          <label for="company">Company <span class="required">*</span></label>
             <input type="text" class="form-control" id="company">
-          <label for="address">Street Address <span>*</span></label>
+          <label for="address">Street Address <span class="required">*</span></label>
             <input type="address" class="form-control" id="address">
             <input type="address" class="form-control" id="address2">
-          <label for="city">City <span>*</span></label>
+          <label for="city">City <span class="required">*</span></label>
             <input type="text" class="form-control" id="city">
               <label for="province">Province / State</label>
-                <select className="browser-default" id="province" name="province">
+                <select class="browser-default form-control" id="province" name="province">
                     <option value="Western Cape">Western Cape</option>
                     <option value="Eastern Cape">Eastern Cape</option>
                     <option value="Northern Cape">Northern Cape</option>
@@ -32,7 +32,7 @@
                     <option value="Limpopo">Limpopo</option>
                     <option value="Mpumalanga">Mpumalanga</option>
                 </select>
-              <label for="postal">Postal Code <span>*</span></label>
+              <label for="postal">Postal Code <span class="required">*</span></label>
                 <input type="text" class="form-control" id="postal">
           <button type="submit" class="btn btn-primary">Submit</button>
         </form> 
@@ -55,7 +55,7 @@
 
 
 export default {
-  name: 'Home',
+  name: 'Checkout',
   components: {
     
   }
@@ -65,11 +65,23 @@ export default {
 <style>
 
 .shipping-form-section{
-  background-color: aqua
+  /* background-color: aqua */
+}
+
+form{
+  padding: 5px
+}
+
+.required{
+  color:red
 }
 
 .order-section{
   background-color: coral
+}
+
+.form-control{
+  margin-bottom: 10px;
 }
 
 </style>
