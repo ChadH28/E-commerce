@@ -1,4 +1,10 @@
+Project Uses Vue 
+
+
 # e-com
+```
+cd client
+```
 
 ## Project setup
 ```
