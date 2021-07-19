@@ -1,7 +1,7 @@
 <template>
     <div class="home container">
         <!-- carousel -->
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-caption d-none d-md-block">
@@ -55,13 +55,14 @@
         </div>
 
         <!-- gallery -->
+        <div class="gallery-container">
         <div class="image-gallery">
-       
             <img src="../assets/golfer.jpg" class="img-fluid gallery-image" alt="Vue image">
             <img src="../assets/hoodie.jpg" class="img-fluid gallery-image" alt="Vue image">
             <img src="../assets/beanie.jpg" class="img-fluid gallery-image" alt="Vue image">
             <img src="../assets/crew.jpg" class="img-fluid gallery-image" alt="Vue image">
             <img src="../assets/v-neck.jpg" class="img-fluid gallery-image" alt="Vue image">
+        </div>
         </div>
        
     </div>
@@ -84,6 +85,15 @@ export default {
 
 .bannerimg{
     height: 70vh; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#carousel{
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.gallery-container{
+margin: auto;
 }
 
 #floater{
@@ -93,9 +103,9 @@ export default {
 }
 
 .image-gallery{
-    margin-top: 50px;
+    margin-top: 10px;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: masonry;
     width: 100%      
@@ -106,5 +116,11 @@ export default {
     display: block;
 }
 
+
+
+.gallery-image:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+}
 
 </style>

@@ -42,6 +42,8 @@
 
 <style>
 
-
+.nav-item, .nav-link{
+  color: black
+}
 
 </style>

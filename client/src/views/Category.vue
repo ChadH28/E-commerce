@@ -86,7 +86,7 @@
                       </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet pariatur voluptatum! Nesciunt, blanditiis cumque!</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -109,7 +109,7 @@
                       </button>
                     </h2>
                     <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet pariatur voluptatum! Nesciunt, blanditiis cumque!</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -119,7 +119,7 @@
                       </button>
                     </h2>
                     <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet pariatur voluptatum! Nesciunt, blanditiis cumque!</div>
                     </div>
                   </div>
                 </div>
@@ -142,7 +142,10 @@ export default {
   methods: {
     toggleProducts() {
       this.showProducts = !this.showProducts
-    }
+    },
+    handleClick() {
+      this.showProducts = !this.showProducts
+    },
    },
 };
 
@@ -202,8 +205,6 @@ export default {
   cursor: pointer;
 }
 
-
-
 .card-title{
   font-family: 'Josefin Sans', sans-serif;
 	font-size: 1.4em; 
@@ -240,7 +241,7 @@ export default {
   transition:0.3s all;
   background: #ef8bef;
   transition: all .3s;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .colors:hover, .size:hover{
@@ -265,11 +266,11 @@ export default {
   background-color: #eceff1;
   border: 2px solid rgb(190, 190, 190);
   padding: 10px;
-  width: 45px;
+  width: 40px;
   height: 30px;
   display: flex;
   align-items: center;
-  margin: 0 15px;
+  margin: 0 5px;
 	cursor: pointer;
 	transition: all .3s;
   font-family: 'Josefin Sans', sans-serif; 
