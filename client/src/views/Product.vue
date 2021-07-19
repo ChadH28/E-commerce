@@ -3,30 +3,34 @@
     <div class='row'>
       <div class="col-6 col-md-6 col-sm-12 carousel-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../assets/golfer.jpg" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../assets/golfer.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
             </div>
             <div class="carousel-item">
-              <img src="../assets/golfer.jpg" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../assets/hoodie.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
             </div>
             <div class="carousel-item">
-              <img src="../assets/golfer.jpg" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../assets/tapered.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+            <ul class="carousel-indicators list-inline thumbnail-holder">
+                <li class="list-inline-item active">
+                    <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                        <img src="../assets/golfer.jpg" id="thumbnail" class="img-fluid">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+                        <img src="../assets/hoodie.jpg" id="thumbnail" class="img-fluid">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+                        <img src="../assets/tapered.jpg" id="thumbnail" class="img-fluid">
+                    </a>
+                </li>
+            </ul>
         </div>
       </div>
       
@@ -75,7 +79,7 @@
 
 
 export default {
-  name: 'Home',
+  name: 'Checkout',
   components: {
    
   },
@@ -94,8 +98,21 @@ export default {
 
 }
 
+.carousel-control-prev-icon{
+  text-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.carousel-control-next-icon{
+  text-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#thumbnail{
+  height: 60px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
 .carousel-section{
-  background-color: aquamarine
+  
 }
 
 .description{
@@ -122,11 +139,6 @@ export default {
 }
 
 
-
-
-
-
-
 /* Position the image container (needed to position the left and right arrows) */
 .carousel-container {
   position: relative;
@@ -142,34 +154,6 @@ export default {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 .carousel-row:after {
   content: "";
@@ -177,22 +161,10 @@ export default {
   clear: both;
 }
 
-/* Six columns side by side */
-.carousel-column {
-  float: left;
-  width: 16.66%;
-}
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
+#carousel-image{
+  height: 50vh
 }
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
 
 
 

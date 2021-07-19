@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <router-link class="navbar-brand" to="/"> Luma</router-link>
                     <div class="nav-item">
-                        <router-link class="nav-link" to="/checkout"><i class="fa fa-shopping-bag"></i> 0</router-link>
+                        <a data-bs-toggle="modal" data-bs-target="#cartModal" class="nav-link" ><i class="fa fa-shopping-bag"></i> 0</a>
                     </div>
             </div>
         </nav>
@@ -37,13 +37,32 @@
                 </div>
             </div>
         </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Cart Items</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <router-link to="/checkout" type="button" class="btn btn-primary">Off to Checkout</router-link>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <style>
 
 .nav-item, .nav-link{
-  color: black
+  color: black;
+  cursor: pointer;
 }
 
 </style>

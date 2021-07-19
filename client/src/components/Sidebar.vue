@@ -72,7 +72,11 @@
                           </button>
                         </h2>
                         <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet pariatur voluptatum! Nesciunt, blanditiis cumque!</div>
+                            <div class="accordion-body">
+                                <a class="dropdown-item" href="#">Cotton</a>
+                                <a class="dropdown-item" href="#">Wool</a>
+                                <a class="dropdown-item" href="#">Silk</a>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">

@@ -18,9 +18,9 @@
                   </div>
                   <div class="card-text">
                     <div class="colors-wrap">
-                      <span class="colors"></span>
-                      <span class="colors selected"></span>
-                      <span class="colors"></span>
+                      <span :class="{ selected: isActive}"  class="colors"></span>
+                      <span :class="{ selected: isActive}" class="colors"></span>
+                      <span :class="{ selected: isActive}" class="colors"></span>
                     </div>
                   </div>
                   <div class="card-text">
@@ -51,7 +51,8 @@ export default {
       data () {
         return {
           showProducts: true,
-          items: products
+          items: products,
+          isActive: false,
         }
   },
   methods: {
@@ -61,7 +62,11 @@ export default {
     handleClick() {
       this.showProducts = !this.showProducts
     },
-   },
+    handleColor() {
+      console.log(this.$refs.color)
+      this.$refs.color.classList.add('selected')
+    },
+  },
 };
 
 
