@@ -37,12 +37,33 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form> 
       </div>
-      <div class="col-md-4 order-section">
-        <div class="card">
+      <div class="col-md-4">
+        <div class="card order-section">
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3 class="card-title">Order Summary</h3>
+            <hr>
+            <p class="card-text">Cash Subtotal</p>
+            <p class="card-text">Shipping</p>
+            <hr>
+            <h5>Order Total</h5>
+            <div class="accordion accordion-flush order-accordion" id="accordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" >
+                  <p class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Items in cart
+                  </p>
+                </h2>
+                <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                  <div class="accordion-body">
+                    <div>
+                      <div>Item 1</div>
+                      <div>Item 2</div>
+                      <div>Item 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +83,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .shipping-form-section{
   /* background-color: aqua */
@@ -77,11 +98,26 @@ form{
 }
 
 .order-section{
-  background-color: coral
+  background-color: rgb(190, 190, 190);
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .form-control{
   margin-bottom: 10px;
 }
+
+
+.accordion-body,
+.accordion-header,
+.accordion-item,
+.order-accordion,
+.accordion-button,
+.accordion-collapse
+{
+  background-color: rgb(190, 190, 190); 
+}
+
+
 
 </style>
