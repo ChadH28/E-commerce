@@ -1,4 +1,9 @@
-Project Uses Vue 
+#Project Uses
+
+Vue, bootstrap, javascript, css, html
+
+# Live link
+https://chadh28.github.io/E-commerce/
 
 
 # e-com
