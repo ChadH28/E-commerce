@@ -8,7 +8,7 @@
           <div v-if="showProducts" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col" v-for="item in items" :key="item.id" >
               <div class="card">
-                <img alt="Vue picture" id='card-img' class="card-img-top" :title="item.name" src="../assets/slim.jpg">
+                <img alt="Vue picture" id='card-img' class="card-img-top" :title="item.name" src="../../public/assets/slim.jpg">
                 <div class="card-body">
                   <h5 class="card-title">{{item.name}}</h5>
                   <div class="card-text">

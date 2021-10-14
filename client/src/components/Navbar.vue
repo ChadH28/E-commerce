@@ -3,9 +3,14 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <router-link class="navbar-brand" to="/"> Luma</router-link>
+                <div class="d-flex">
                     <div class="nav-item">
                         <a data-bs-toggle="modal" data-bs-target="#cartModal" class="nav-link" ><i class="fa fa-shopping-bag"></i> 0</a>
                     </div>
+                    <div class="nav-item">
+                        <a class="nav-link" >Sign In</a>
+                    </div>
+                </div>
             </div>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -57,6 +62,37 @@
         </div>
     </div>
 </template>
+
+
+<script>
+export default {
+    data() {
+        return {
+            cart: '',
+            form: {
+                user: '',
+                password: ''
+            }
+        }
+    },
+    methods: {
+        gotoCheckout() {
+            this.$router.push('checkout')
+        },
+        // onSubmit(e) {
+        //     e.preventDefault();
+        //     if(this.form.user == 'admin' && this.form.password == '1234') {
+        //         this.$router.push('checkout');
+        //         localStorage.setItem('admin', JSON.stringify('true'))
+        //     } else {
+        //         return false;
+        //     }
+        // }
+    },
+}
+</script>
+
+
 
 <style>
 

@@ -7,7 +7,7 @@
         <form class="form-inline" action="/action_page.php">
           <label for="email">Email Address <span class="required">*</span></label>
             <input type="email" class="form-control" placeholder="Enter email" id="email">
-            <p>You can create am account after checkout.</p>
+            <p>You can create an account after checkout.</p>
             <hr>
           <label for="name">First Name <span class="required">*</span></label>
             <input type="text" class="form-control" id="name">

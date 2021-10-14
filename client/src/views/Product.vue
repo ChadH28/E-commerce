@@ -5,29 +5,29 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../assets/golfer.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../../public/assets/golfer.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../../public/assets/golfer.jpg">
             </div>
             <div class="carousel-item">
-              <img src="../assets/hoodie.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../../public/assets/hoodie.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../../public/assets/golfer.jpg">
             </div>
             <div class="carousel-item">
-              <img src="../assets/tapered.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../assets/golfer.jpg">
+              <img src="../../public/assets/tapered.jpg" id="carousel-image" class="d-block w-100 img-fluid" alt="../../public/assets/golfer.jpg">
             </div>
           </div>
             <ul class="carousel-indicators list-inline thumbnail-holder">
                 <li class="list-inline-item active">
                     <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                        <img src="../assets/golfer.jpg" id="thumbnail" class="img-fluid">
+                        <img src="../../public/assets/golfer.jpg" id="thumbnail" class="img-fluid">
                     </a>
                 </li>
                 <li class="list-inline-item">
                     <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
-                        <img src="../assets/hoodie.jpg" id="thumbnail" class="img-fluid">
+                        <img src="../../public/assets/hoodie.jpg" id="thumbnail" class="img-fluid">
                     </a>
                 </li>
                 <li class="list-inline-item">
                     <a data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
-                        <img src="../assets/tapered.jpg" id="thumbnail" class="img-fluid">
+                        <img src="../../public/assets/tapered.jpg" id="thumbnail" class="img-fluid">
                     </a>
                 </li>
             </ul>
@@ -79,7 +79,7 @@
 
 
 export default {
-  name: 'Checkout',
+  name: 'Product',
   components: {
    
   },
